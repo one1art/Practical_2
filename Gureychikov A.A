@@ -1,0 +1,76 @@
+--create database practiclesson2;
+--create extention if not exists "uuid-ossp";
+--
+----create table client 
+----(
+----"uuid" uuid primary key,
+--first_name varchar,
+--last_name varchar,
+--phone int,
+--email varchar,
+--address varchar,
+--create_at date,
+--confirmed boolean,
+--country_id int,
+--balance real
+--);
+
+insert into client (first_name, last_name, phone, email, 
+address, create_at, confirmed, country_id, balance) values
+('Elena', 'Burunova', '+79005657844', 'el@mail.com', 'Grodno', '2022.08.07', 'true', '7', '500'),
+('Petr', 'Alekseev', '+79507685667', 'petr@mail.com', 'Vladimir', '2022.07.09', 'true', '8', '450'),
+('Mihail', 'Vasilev', '+79896788998', 'vas@mail.com', 'Irkutsk', '2010.09.09', 'true', '6', '150'),
+('Elena', 'Ivanova', '+79005785657', 'el@mail.com', 'Bryansk', '2009.05.08', 'true', '2', '234,4'),
+('Igor', 'Pupkin', '+79895677876', 'ig@mail.com', 'Riga', '1999.09.09', 'true', '1', '345'),
+('Valentin', 'Burunov', '+79006869087', 'vat5@mail.ru', 'Bryansk', '1989.08.09', 'true' , '11', '789.9'),
+('Ivan', 'Pilev', '+79608798767', 'er@mail.ru', 'Saratov', '1889.06.02', 'true', '13', '567.5'),
+('Artem', 'Popov', '+79607868987', 'ar@mail.ru', 'Saratov', '1990.09.09', 'true', '15', '578.8'),
+('Igor', 'Vasin', '+79005764578', 'fhj@mail.ru', 'Grodno', '1897.08.02', 'true', '14', '467.7'),
+('Olga', 'Abramova', '+79567896785', 'abr@yan.ru', 'Bobruysk', '2009.04.02', 'true', '17', '888');
+
+
+
+
+--create table product
+--(
+--id serial,
+--name_product varchar, 
+--description_product varchar, 
+--amount varchar, 
+--price real, 
+--provider varchar, 
+--address_provider varchar, 
+--country_provider varchar
+--);
+
+insert into product (name_product, description_product, amount, 
+price, provider, address_provider, country_provider) values
+('Olha', 'Wood', '10', '578', 'IP Juk', 'Baker street', 'Ingland'),
+('Dub', 'Wood', '50', '700', 'IP Juk', 'Baker street', 'Ingland'),
+('Sosna', 'Wood', '20', '999', 'IP Juk', 'Baker street', 'Ingland'),
+('Bereza', 'Wood', '33', '432', 'IP Juk', 'Baker street', 'Ingland'),
+('Lipa', 'Wood', '888', '1111', 'ZAO Drova', 'Lesnaya street', 'Vologda'),
+('Oreh', 'Wood', '123', '989', 'ZAO Drova', 'Lesnaya street', 'Vologda'),
+('Grusha', 'Wood', '555', '676', 'IP Opilki', 'Opushka street', 'Ivanovo'),
+('Yablonya', 'Wood', '787', '848', 'IP Opilki', 'Opushka street', 'Ivanovo'),
+('Klen', 'Wood', '758', '2546', 'ZAO Drova', 'Lesnaya street', 'Vologda'),
+('Tuya', 'Wood', '4758', '46574', 'IP Opilki', 'Opushka street', 'Ivanovo');
+
+
+
+create table basket
+(
+id serial,
+id_client serial,
+id_product serial
+);
+
+
+
+create table country
+(
+id serial, 
+name varchar, 
+short_code varchar
+);
+
